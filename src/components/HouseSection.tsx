@@ -2,13 +2,7 @@ import { useState } from 'react'
 import { story } from '../content/story'
 
 export function HouseSection() {
-  const [photos, setPhotos] = useState([true, true])
-
-  function hide(i: number) {
-    setPhotos(p => p.map((x, j) => (j === i ? false : x)))
-  }
-
-  const anyPhoto = photos.some(Boolean)
+  const [photoVisible, setPhotoVisible] = useState(true)
 
   return (
     <section id="a-casa" className="py-14 px-6 border-t border-stone-100">
@@ -29,20 +23,14 @@ export function HouseSection() {
           ))}
         </div>
 
-        {anyPhoto && (
-          <div className="grid grid-cols-2 gap-3 mb-12">
-            {[0, 1].map((i) =>
-              photos[i] ? (
-                <div key={i} className="rounded-lg overflow-hidden bg-stone-200 aspect-[4/3]">
-                  <img
-                    src={`/images/casa-${i + 1}.jpeg`}
-                    alt=""
-                    className="w-full h-full object-cover"
-                    onError={() => hide(i)}
-                  />
-                </div>
-              ) : null
-            )}
+        {photoVisible && (
+          <div className="mb-12 rounded-xl overflow-hidden bg-stone-200 aspect-[4/3] md:aspect-[16/7]">
+            <img
+              src="/images/casa-1.jpeg"
+              alt="A casa em Gurinhém"
+              className="w-full h-full object-cover"
+              onError={() => setPhotoVisible(false)}
+            />
           </div>
         )}
 

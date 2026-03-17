@@ -47,14 +47,14 @@ export function SupportSection() {
   }
 
   return (
-    <section id="como-ajudar" className="py-16 md:py-24 px-6 bg-stone-50 border-t border-stone-100">
+    <section id="como-ajudar" className="py-16 md:py-24 px-6 bg-surface">
       <div className="max-w-5xl mx-auto">
 
         <div className="mb-12 md:mb-16">
           <p className="text-xs font-medium tracking-widest uppercase text-stone-400 mb-3">
             Como ajudar
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold text-stone-900 leading-snug mb-5">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-stone-900 leading-snug mb-5">
             Caminhar junto
           </h2>
           <p className="text-stone-600 text-[15px] leading-relaxed max-w-xl">
@@ -63,18 +63,18 @@ export function SupportSection() {
         </div>
 
         {/* Pix — elemento dominante */}
-        <div className="bg-stone-900 p-8 md:p-12 mb-6">
+        <div className="bg-ink p-10 md:p-14 mb-6">
           <p className="text-xs font-medium tracking-widest uppercase text-stone-400 mb-8">
             Apoio financeiro — Pix
           </p>
           <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-center">
-            <div className="border-2 border-stone-700 p-3 shrink-0">
-              <QRCodeSVG value={qr} size={160} level="M" bgColor="#1c1917" fgColor="#f5f5f4" />
+            <div className="shrink-0">
+              <QRCodeSVG value={qr} size={180} level="M" bgColor="#1C1917" fgColor="#FAF8F5" />
             </div>
             <div className="flex flex-col gap-5">
               <div>
                 <p className="text-xs text-stone-500 mb-1 tracking-wide">Chave CPF</p>
-                <p className="font-mono text-xl md:text-2xl font-semibold text-white tracking-tight">
+                <p className="font-serif text-2xl font-semibold text-white">
                   {campaign.pixKey}
                 </p>
                 <p className="text-sm text-stone-400 mt-1">{campaign.pixName}</p>
@@ -83,7 +83,7 @@ export function SupportSection() {
                 onClick={copyKey}
                 className="self-start text-sm font-medium bg-white text-stone-900 hover:bg-stone-100 px-5 py-2.5 transition-colors"
               >
-                {copied ? '✓ Chave copiada' : 'Copiar chave Pix'}
+                {copied ? '✓ Copiado!' : 'Copiar chave Pix'}
               </button>
             </div>
           </div>
@@ -122,11 +122,6 @@ export function SupportSection() {
             </button>
           </div>
 
-        </div>
-
-        <div className="mt-14 pt-10 border-t border-stone-200">
-          <p className="text-stone-500 text-[15px]">{family.closing}</p>
-          <p className="text-stone-700 text-[15px] mt-1 italic">{family.signature}</p>
         </div>
 
       </div>

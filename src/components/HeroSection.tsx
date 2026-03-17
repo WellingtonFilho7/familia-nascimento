@@ -21,9 +21,12 @@ export function HeroSection() {
             <p className="text-xs font-medium tracking-widest uppercase text-stone-400 mb-5">
               {family.location}
             </p>
-            <h1 className="text-3xl md:text-4xl font-semibold text-stone-900 leading-snug mb-8">
+            <h1 className="text-3xl md:text-4xl font-semibold text-stone-900 leading-snug mb-3">
               {family.names}
             </h1>
+            <p className="text-base md:text-lg text-stone-500 leading-relaxed mb-8">
+              {family.mission}
+            </p>
             <div className="space-y-4">
               {family.identityParagraphs.map((p, i) => (
                 <p key={i} className="text-stone-600 leading-relaxed text-[15px]">

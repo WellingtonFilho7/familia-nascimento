@@ -1,5 +1,6 @@
 export const family = {
   names: "Wellington e Dyanna Nascimento",
+  mission: "Ensino das Escrituras. Cuidado da Igreja. Formação de famílias.",
   location: "Gurinhém, Agreste da Paraíba",
 
   identityParagraphs: [

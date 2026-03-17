@@ -14,7 +14,7 @@ export const family = {
   supportIntro:
     "Se você quer caminhar com a gente — seja com apoio financeiro, oração ou simplesmente acompanhando o que está acontecendo — é só entrar em contato. Não há forma certa de participar.",
 
-  pullQuote: "Vida, ministério e rotina — no mesmo lugar.",
+  pullQuote: "Não estamos construindo um projeto. Estamos vivendo uma vida.",
 
   closing: "Obrigado por caminhar com a gente até aqui.",
   signature: "Em Cristo, Wellington e Dyanna",

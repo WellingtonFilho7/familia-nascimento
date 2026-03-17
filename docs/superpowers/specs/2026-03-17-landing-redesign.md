@@ -106,7 +106,7 @@ Rhythm: light → light → **dark** → light → light → **dark**
 ### Stats Strip
 - 4 columns with `divide-x divide-stone-200` on md+, 2×2 grid on mobile
 - **Col 1:** value `5`, label `filhos`
-- **Col 2:** value `3`, label `frentes`
+- **Col 2:** value `5`, label `frentes`
 - **Col 3:** single centered text `Igreja · Escola · Casa` — Lora, `text-base font-semibold text-stone-900`. No label row. This column uses a smaller font than cols 1/2/4 because the string is longer. The absent label row is replaced by empty space to maintain vertical alignment with neighbors.
 - **Col 4:** value `Gurinhém`, label `Paraíba`
 - Value style: Lora, `text-2xl font-semibold text-stone-900`
@@ -127,7 +127,8 @@ Rhythm: light → light → **dark** → light → light → **dark**
 ### Citação tipográfica
 - Background: `#1C1917`
 - Quote body (`family.pullQuote`): Lora, `text-3xl md:text-5xl font-semibold text-white leading-snug max-w-3xl mx-auto text-center`
-- Opening/closing quotation marks rendered as part of the string: `"Vida, ministério e rotina — no mesmo lugar."`
+- Opening/closing quotation marks rendered as part of the string: `"Não estamos construindo um projeto. Estamos vivendo uma vida."`
+- Update `family.pullQuote` in `src/content/family.ts` to this string
 - Attribution: `— Wellington e Dyanna Nascimento` — Inter, `text-xs uppercase tracking-widest text-stone-500 mt-6 text-center`
 
 ### Diário / Updates
@@ -161,14 +162,17 @@ Rhythm: light → light → **dark** → light → light → **dark**
 
 ## Photos Needed
 
-| # | Description | Used in | Required? |
-|---|-------------|---------|-----------|
-| 1 | Família — retrato amplo, horizontal, boa iluminação natural, rostos visíveis | Hero full-bleed | **Required** |
-| 2 | Wellington pregando ou ensinando — ambiente de igreja, luz ambiente | Frentes (Igreja Comum) | Optional |
-| 3 | Dyanna com crianças / sala de aula — Lumine | Frentes (Lumine) | Optional |
-| 4 | Família em Gurinhém — rua, casa, cotidiano | Apoio ou Quote section | Optional |
+All placeholders are built into the design. Provide photos at any time and the implementer swaps them in.
 
-Photos 2–4 are optional and can be added later. Photo 1 is required for the Hero to work — without it the Hero renders a dark `#1C1917` fallback.
+| # | Filename | Description | Used in | Required? |
+|---|----------|-------------|---------|-----------|
+| 1 | `hero.jpg` | Família — retrato amplo, horizontal, boa iluminação natural, rostos visíveis | Hero full-bleed | **Required** |
+| 2 | `frente-igreja.jpg` | Wellington pregando ou ensinando — ambiente de igreja, luz ambiente | Card: Igreja Comum | Optional |
+| 3 | `frente-lumine.jpg` | Dyanna com crianças / sala de aula | Card: Lumine | Optional |
+| 4 | `cotidiano.jpg` | Família em Gurinhém — rua, casa, cotidiano | Seção Apoio (fundo) | Optional |
+
+Without Photo 1, the Hero renders a solid `#1C1917` (dark) fallback — functional but without visual impact.
+Photos 2–4 appear as cards with `aspect-video object-cover` above the card text. If the file is absent, the card renders without the image (text-only fallback).
 
 **File placement:** `public/images/` (same as current `familia.jpeg`)
 

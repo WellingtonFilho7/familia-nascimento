@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "familia-nascimento/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "^/$", "dest": "/familia-nascimento/index.html" },
+    { "src": "^/obrigado$", "dest": "/familia-nascimento/obrigado.html" },
+    { "src": "^/(.*)$", "dest": "/familia-nascimento/$1" }
+  ]
+}

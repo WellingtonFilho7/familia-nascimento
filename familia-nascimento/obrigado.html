@@ -4,77 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrigado! — Família Nascimento</title>
+  <meta name="description" content="Obrigado por se tornar parceiro da Família Nascimento em Gurinhém. Deixe seus dados para receber atualizações mensais.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F5F0E6; --sand: #D8CEB8; --sand-lt: #EAE3D4;
-      --olive: #3B4330; --terracotta: #A54822; --terra-lt: #C9603A;
-      --text: #2C2A22; --text-mid: #504E46; --text-light: #6E6A60;
-      --on-olive: #ECE5D2;
-    }
-    body { background: var(--cream); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
-    .wrap { max-width: 660px; margin: 0 auto; padding: 0 28px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.skip-link { position: absolute; top: -100%; left: 16px; background: var(--olive); color: #fff; padding: 10px 18px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 3px; z-index: 200; transition: top .2s; }
+.skip-link:focus { top: 16px; }
+*:focus-visible { outline: 2px solid var(--terra-pale); outline-offset: 3px; }
+:root {
+  --cream: #F2EDE3; --sand: #D4C9AF; --sand-lt: #E8E0D0;
+  --olive: #2D3424; --olive-deep: #1E2418;
+  --terracotta: #A54822; --terra-lt: #C9603A;
+  --text: #28261F; --text-mid: #4E4B43; --text-light: #6A6660;
+  --on-olive: #E8DFC8;
+  --terra-pale: #E8A580;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); font-family: 'Alegreya Sans', sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
 
-    /* HEADER */
-    .top { background: var(--olive); padding: clamp(52px, 9vw, 96px) 28px clamp(48px, 8vw, 80px); text-align: center; }
-    .top-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: #E8A580; margin-bottom: 20px; }
-    .top-h { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(34px, 8vw, 52px); line-height: 1.1; color: #fff; margin-bottom: 20px; }
-    .top-rule { width: 44px; height: 2px; background: #E8A580; margin: 0 auto 22px; }
-    .top-body { font-size: 17px; line-height: 1.75; color: var(--on-olive); opacity: .9; max-width: 520px; margin: 0 auto; }
+/* HEADER */
+.top { background: var(--olive-deep); padding: clamp(56px, 9vw, 100px) 28px clamp(52px, 8vw, 84px); text-align: center; }
+.top-inner { max-width: 660px; margin: 0 auto; }
+.top-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terra-pale); margin-bottom: 20px; }
+.top-h { font-family: 'Alegreya', serif; font-style: italic; font-weight: 400; font-size: clamp(34px, 8vw, 52px); line-height: 1.1; color: #fff; margin-bottom: 20px; text-wrap: balance; }
+.top-rule { width: 44px; height: 2px; background: var(--terra-pale); margin: 0 auto 24px; }
+.top-body { font-size: 17px; line-height: 1.78; color: var(--on-olive); opacity: .92; max-width: 48ch; margin: 0 auto; }
 
-    /* FORM SECTION */
-    .form-sec { padding: clamp(60px, 9vw, 96px) 0 clamp(72px, 10vw, 112px); }
-    .form-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terracotta); margin-bottom: 16px; text-align: center; }
-    .form-intro { font-size: 17px; line-height: 1.75; color: var(--text-mid); text-align: center; margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; }
+/* NEXT STEP */
+.next-sec { padding: clamp(60px, 9vw, 96px) 0 clamp(72px, 10vw, 112px); }
+.wrap { max-width: 660px; margin: 0 auto; padding: 0 28px; }
+.sec-ctx { font-size: 13px; color: var(--text-light); margin-bottom: 12px; letter-spacing: .01em; font-style: italic; text-align: center; }
+.sec-title { font-family: 'Alegreya', serif; font-weight: 700; font-size: clamp(26px, 5.5vw, 36px); line-height: 1.15; color: var(--olive); letter-spacing: -.008em; margin-bottom: 10px; text-align: center; text-wrap: balance; }
+.rule { width: 38px; height: 2px; background: var(--terracotta); margin: 0 auto 28px; }
+.form-intro { font-size: 17px; line-height: 1.78; color: var(--text-mid); text-align: center; margin-bottom: 44px; max-width: 52ch; margin-left: auto; margin-right: auto; }
 
-    /* Typeform embed container */
-    .tf-wrap {
-      border: 1px solid var(--sand);
-      background: #fff;
-      min-height: 480px;
-      overflow: hidden;
-      border-radius: 2px;
-    }
+/* Typeform embed container */
+.tf-wrap {
+  border: 1px solid var(--sand);
+  background: #fff;
+  min-height: 480px;
+  overflow: hidden;
+  border-radius: 2px;
+}
 
-    /* CONTACT STRIP */
-    .contact-strip { background: var(--sand-lt); padding: clamp(44px, 7vw, 72px) 28px; text-align: center; }
-    .cs-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terracotta); margin-bottom: 20px; }
-    .cs-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .cs-link { font-size: 15px; font-weight: 500; color: var(--olive); text-decoration: none; padding: 14px 24px; border: 1px solid var(--sand); background: var(--cream); border-radius: 3px; letter-spacing: .01em; transition: background .2s, border-color .2s; }
-    .cs-link:hover { background: #fff; border-color: var(--text-light); }
+/* CONTACT STRIP */
+.contact-strip { background: var(--sand-lt); padding: clamp(44px, 7vw, 72px) 28px; text-align: center; }
+.cs-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terracotta); margin-bottom: 20px; }
+.cs-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.cs-link { font-size: 15px; font-weight: 500; color: var(--olive); text-decoration: none; padding: 13px 24px; border: 1px solid var(--sand); background: var(--cream); border-radius: 3px; letter-spacing: .01em; transition: background .2s, border-color .2s; }
+.cs-link:hover { background: #fff; border-color: var(--text-light); }
 
-    /* FOOTER */
-    footer { padding: 40px 28px; text-align: center; border-top: 1px solid var(--sand); }
-    footer p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
-    footer em { font-style: italic; }
-    .back-link { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--terracotta); text-decoration: none; }
-    .back-link:hover { text-decoration: underline; }
+/* FOOTER */
+footer { padding: 40px 28px; text-align: center; border-top: 1px solid var(--sand); }
+footer p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+footer em { font-style: italic; }
+.back-link { display: inline-block; margin-top: 18px; font-size: 14px; font-weight: 600; color: var(--terracotta); text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
 
-    @media (max-width: 480px) {
-      .wrap { padding: 0 22px; }
-    }
+@media (max-width: 480px) {
+  .wrap { padding: 0 22px; }
+  .top { padding-left: 22px; padding-right: 22px; }
+}
   </style>
 </head>
 <body>
 
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
 <!-- HEADER -->
 <div class="top">
-  <div style="max-width:660px;margin:0 auto">
-    <p class="top-label">Muito obrigado</p>
-    <h1 class="top-h">Sua parceria<br>nos encoraja.</h1>
+  <div class="top-inner">
+    <p class="top-label">Bem-vindo à parceria</p>
+    <h1 class="top-h">Você agora<br>caminha conosco.</h1>
     <div class="top-rule"></div>
-    <p class="top-body">Você acabou de dar um passo concreto para que nossa família permaneça em Gurinhém com estabilidade. Isso significa muito para nós.</p>
+    <p class="top-body">Obrigado por dar esse passo. Sua parceria mensal nos ajuda a permanecer em Gurinhém com estabilidade e a servir de perto. Isso é muito concreto para nós.</p>
   </div>
 </div>
 
+<main id="conteudo">
+
 <!-- FORM -->
-<section class="form-sec">
+<section class="next-sec">
   <div class="wrap">
-    <p class="form-label">Um passo a mais</p>
-    <p class="form-intro">Para que você receba nossos informativos mensais com atualizações da Igreja Comum, do Instituto Lumine e da nossa vida em Gurinhém, deixe seus dados abaixo.</p>
+    <p class="sec-ctx">Para receber nossos informativos</p>
+    <h2 class="sec-title">Deixe seus dados</h2>
+    <div class="rule"></div>
+    <p class="form-intro">Uma vez por mês enviamos um informativo simples e honesto com notícias de Gurinhém, da Igreja Comum, do Instituto Lumine e da nossa vida em família.</p>
     <div class="tf-wrap">
       <div data-tf-live="wn3vzrEw" style="width:100%;height:480px;"></div>
     </div>
@@ -83,7 +100,7 @@
 
 <!-- CONTACT -->
 <div class="contact-strip">
-  <p class="cs-lbl">Fale com a gente</p>
+  <p class="cs-label">Fale com a gente</p>
   <div class="cs-links">
     <a class="cs-link" href="https://wa.me/5583999943792" target="_blank" rel="noopener">WhatsApp</a>
     <a class="cs-link" href="https://instagram.com/wellingtonfilho" target="_blank" rel="noopener">@wellingtonfilho</a>
@@ -91,9 +108,11 @@
   </div>
 </div>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
-  <p>Wellington &amp; Dyanna Nascimento &mdash; <em>Missão em Gurinhém, Paraíba</em></p>
+  <p>Wellington &amp; Dyanna Nascimento<br><em>Missão em Gurinhém, Paraíba</em></p>
   <a class="back-link" href="/">← Voltar para a página principal</a>
 </footer>
 

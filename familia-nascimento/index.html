@@ -118,7 +118,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 /* TWO FRONTS */
 .fronts { margin: 8px 0 32px; }
 .front { padding: 28px 0; border-top: 1px solid var(--sand); }
-.front-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terracotta); margin-bottom: 8px; }
+.front-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--terracotta); margin-bottom: 8px; }
 .front-name { font-family: 'Alegreya', serif; font-weight: 400; font-size: 30px; color: var(--olive); line-height: 1.2; margin-bottom: 10px; }
 .front-name em { font-style: italic; }
 .front-desc { font-size: 15px; line-height: 1.75; color: var(--text-mid); }
@@ -126,7 +126,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 /* PILOT BOX */
 .pilot { margin: 24px 0 8px; padding: 22px; border: 1px solid var(--sand); background: rgba(255,255,255,.5); }
-.pilot-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: var(--terracotta); margin-bottom: 12px; }
+.pilot-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--terracotta); margin-bottom: 12px; }
 .pilot ul { list-style: none; }
 .pilot li { font-size: 14px; line-height: 1.65; color: var(--text-mid); padding: 7px 0; border-bottom: 1px solid var(--sand); display: flex; gap: 10px; }
 .pilot li:last-child { border-bottom: none; padding-bottom: 0; }
@@ -135,9 +135,9 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 /* GOAL / DONATION */
 .goal { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); padding: 26px; margin-bottom: 28px; border-radius: 2px; }
-.goal-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--terra-pale); margin-bottom: 10px; }
+.goal-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: var(--terra-pale); margin-bottom: 10px; }
 .goal-h { font-family: 'Alegreya', serif; font-weight: 400; font-size: clamp(19px, 4.5vw, 24px); line-height: 1.35; color: #fff; margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.14); }
-.helps-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: rgba(255,255,255,.65); margin-bottom: 10px; }
+.helps-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.65); margin-bottom: 10px; }
 .helps { list-style: none; margin-bottom: 0; }
 .helps li { font-size: 14px; line-height: 1.72; color: var(--on-olive); padding: 5px 0; display: flex; gap: 10px; }
 .helps li::before { content: "—"; color: var(--terra-pale); flex-shrink: 0; }
@@ -157,7 +157,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 /* PIX */
 .pix { margin-top: 52px; padding: 28px 24px; border: 1px solid rgba(255,255,255,.16); border-radius: 2px; }
-.pix-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--terra-pale); margin-bottom: 14px; }
+.pix-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: var(--terra-pale); margin-bottom: 14px; }
 .pix-line { font-size: 15px; color: var(--on-olive); margin-bottom: 6px; }
 .pix-line strong { font-weight: 600; }
 .pix-note { font-size: 13px; color: rgba(255,255,255,.52); margin-top: 12px; line-height: 1.7; font-style: italic; }
@@ -178,7 +178,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 /* CLOSING */
 .closing { text-align: center; padding: 96px 0 80px; }
-.closing-h { font-family: 'Alegreya', serif; font-style: italic; font-weight: 300; font-size: clamp(30px, 6.5vw, 42px); line-height: 1.3; color: #fff; margin-bottom: 24px; }
+.closing-h { font-family: 'Alegreya', serif; font-style: italic; font-weight: 400; font-size: clamp(30px, 6.5vw, 42px); line-height: 1.3; color: #fff; margin-bottom: 24px; }
 .closing-lines { font-family: 'Alegreya', serif; font-style: italic; font-size: clamp(17px, 4vw, 22px); color: rgba(236,229,210,.95); line-height: 1.8; margin-bottom: 36px; }
 .bg-olive .btn-primary { background: var(--terra-pale); color: var(--olive); }
 .bg-olive .btn-primary:hover { background: #F1B898; }
@@ -196,7 +196,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 .fade-in { transition: opacity .9s ease, transform .9s ease; }
 .fade-in.will-animate { opacity: 0; transform: translateY(28px); }
 .fade-in.will-animate.visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .fade-in { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .fade-in { transition: none; } .float-cta { transition: none; } }
 
 
 @media (min-width: 1024px) {
@@ -394,43 +394,6 @@ p.body strong { font-weight: 600; color: var(--text); }
   </div>
 </section>
 
-<section class="bg-olive fade-in" id="contribuir">
-  <div class="wrap">
-    <p class="label">O convite</p>
-    <h2 class="sec-title">Caminhe conosco mensalmente</h2>
-    <div class="rule"></div>
-    <div class="goal">
-      <p class="goal-lbl">Nossa primeira meta</p>
-      <p class="goal-h">50 parceiros mensais para nos ajudar a permanecer em Gurinhém com estabilidade</p>
-      <p class="helps-lbl">Sua contribuição mensal nos ajuda a</p>
-      <ul class="helps">
-        <li>Morar em Gurinhém com estabilidade: casa, alimentação e transporte</li>
-        <li>Cuidar da Igreja Comum com constância</li>
-        <li>Dedicar tempo e presença ao Instituto Lumine</li>
-        <li>Receber pessoas em casa, ouvir, orar e acompanhar</li>
-        <li>Cobrir despesas da nossa família e da educação dos nossos filhos</li>
-        <li>Manter uma rotina de serviço sem depender de improviso todo mês</li>
-        <li>Construir com calma, sem pressionar uma comunidade ainda em formação</li>
-      </ul>
-    </div>
-    <p class="tiers-lbl">Escolha um valor mensal</p>
-    <div class="tiers">
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c1bc86871564e81b67c430d7e22c15a" target="_blank" rel="noopener"><span class="tier-amt">R$50</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4a3c0c56e39a44338dbad6e5bd4d46f1" target="_blank" rel="noopener"><span class="tier-amt">R$250</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=bde959feefbf478b9df22a85b396c1a7" target="_blank" rel="noopener"><span class="tier-amt">R$500</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn tier-livre" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=27854a51c7cf489595d913b44d059b27" target="_blank" rel="noopener"><span class="tier-amt">Outro valor</span><span class="tier-unit">escolher</span></a>
-    </div>
-    <p class="partner-note">Alguns podem contribuir com menos, outros com mais. O alvo é formar uma base de <strong>50 parceiros fiéis</strong>.<br>A soma dessas parcerias nos dá algo precioso: margem para permanecer.</p>
-    <div class="pix">
-      <p class="pix-lbl">Para ofertas pontuais &mdash; Pix</p>
-      <p class="pix-line">Chave: <strong>056.758.164-02</strong></p>
-      <p class="pix-line">Nome: <strong>José Wellington do Nascimento Filho</strong></p>
-      <p class="pix-note">Para parceria mensal, prefira os botões acima. Para ofertas pontuais via Pix, envie seu contato pelo WhatsApp para receber nossos informativos mensais. Toda oferta é recebida com gratidão. Mas, neste momento, as parcerias mensais são o que mais nos ajudam a planejar e servir com constância.</p>
-    </div>
-  </div>
-</section>
-
 <section class="fade-in">
   <div class="wrap">
     <p class="sec-ctx">Parceria é relacionamento</p>
@@ -450,6 +413,40 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 <section class="compact fade-in">
   <p class="ac-quote">Caminhamos com prestação de contas, vínculos pastorais e responsabilidade ministerial por meio de relacionamentos de longa data no Brasil.</p>
+</section>
+
+<section class="bg-olive fade-in" id="contribuir">
+  <div class="wrap">
+    <p class="label">O convite</p>
+    <h2 class="sec-title">Caminhe conosco mensalmente</h2>
+    <div class="rule"></div>
+    <div class="goal">
+      <p class="goal-lbl">Nossa primeira meta</p>
+      <p class="goal-h">50 parceiros mensais para nos ajudar a permanecer em Gurinhém com estabilidade</p>
+      <p class="helps-lbl">Sua contribuição mensal nos ajuda a</p>
+      <ul class="helps">
+        <li>Morar em Gurinhém com estabilidade: casa, alimentação e transporte</li>
+        <li>Cuidar da Igreja Comum e do Instituto Lumine com constância</li>
+        <li>Receber pessoas, ouvir, orar e acompanhar de perto</li>
+        <li>Manter uma rotina de serviço sem depender de improviso todo mês</li>
+      </ul>
+    </div>
+    <p class="tiers-lbl">Escolha um valor mensal</p>
+    <div class="tiers">
+      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c1bc86871564e81b67c430d7e22c15a" target="_blank" rel="noopener"><span class="tier-amt">R$50</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4a3c0c56e39a44338dbad6e5bd4d46f1" target="_blank" rel="noopener"><span class="tier-amt">R$250</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=bde959feefbf478b9df22a85b396c1a7" target="_blank" rel="noopener"><span class="tier-amt">R$500</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn tier-livre" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=27854a51c7cf489595d913b44d059b27" target="_blank" rel="noopener"><span class="tier-amt">Outro valor</span><span class="tier-unit">escolher</span></a>
+    </div>
+    <p class="partner-note">Alguns podem contribuir com menos, outros com mais. O alvo é formar uma base de <strong>50 parceiros fiéis</strong>.<br>A soma dessas parcerias nos dá algo precioso: margem para permanecer.</p>
+    <div class="pix">
+      <p class="pix-lbl">Para ofertas pontuais via Pix</p>
+      <p class="pix-line">Chave: <strong>056.758.164-02</strong></p>
+      <p class="pix-line">Nome: <strong>José Wellington do Nascimento Filho</strong></p>
+      <p class="pix-note">Para parceria mensal, prefira os botões acima. Para ofertas pontuais via Pix, envie seu contato pelo WhatsApp para receber nossos informativos mensais. Toda oferta é recebida com gratidão. Mas, neste momento, as parcerias mensais são o que mais nos ajudam a planejar e servir com constância.</p>
+    </div>
+  </div>
 </section>
 
 <section class="bg-sand fade-in">

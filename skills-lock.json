@@ -7,6 +7,12 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
     },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "2f248d7db158d32acb8d52e688444de1edbaccf7344ac5288634cbe427bc8a8a"
+    },
     "landing-page-design": {
       "source": "inferen-sh/skills",
       "sourceType": "github",

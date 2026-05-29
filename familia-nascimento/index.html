@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Família Nascimento — Missão em Gurinhém</title>
   <meta name="description" content="Uma família cristã enraizada em Gurinhém, Paraíba. Cuidado pastoral, vida comunitária e educação cristã. Torne-se um parceiro mensal.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Família Nascimento — Missão em Gurinhém">
+  <meta property="og:description" content="Wellington e Dyanna Nascimento deixaram a cidade para servir de perto no interior da Paraíba. Cuidado pastoral, Igreja Comum e Instituto Lumine. Torne-se um parceiro mensal.">
+  <meta property="og:image" content="https://familia-nascimento.vercel.app/assets/familia.webp">
+  <meta property="og:url" content="https://familia-nascimento.vercel.app/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Família Nascimento — Missão em Gurinhém">
+  <meta name="twitter:description" content="Uma família cristã enraizada em Gurinhém, PB. Parceria mensal para missão pastoral e educação cristã.">
+  <meta name="twitter:image" content="https://familia-nascimento.vercel.app/assets/familia.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,13 +23,14 @@
 html { scroll-behavior: smooth; }
 .skip-link { position: absolute; top: -100%; left: 16px; background: var(--olive); color: #fff; padding: 10px 18px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 3px; z-index: 200; transition: top .2s; }
 .skip-link:focus { top: 16px; }
-*:focus-visible { outline: 2px solid #E8A580; outline-offset: 3px; }
+*:focus-visible { outline: 2px solid var(--terra-pale); outline-offset: 3px; }
 :root {
   --cream: #F5F0E6; --sand: #D8CEB8; --sand-lt: #EAE3D4;
   --olive: #3B4330; --olive-mid: #5B6448;
   --terracotta: #A54822; --terra-lt: #C9603A;
   --text: #2C2A22; --text-mid: #504E46; --text-light: #6E6A60;
   --on-olive: #ECE5D2;
+  --terra-pale: #E8A580;
   --content-max: 760px;
   --layout-max: 1120px;
 }
@@ -54,13 +65,15 @@ section { padding: 88px 0; }
 section.compact { padding: 60px 0; }
 section#contribuir { padding-top: clamp(110px, 14vw, 152px); }
 .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--terracotta); margin-bottom: 16px; }
-.bg-olive .label { color: #E8A580; }
+.bg-olive .label { color: var(--terra-pale); }
+.sec-ctx { font-size: 13px; color: var(--text-light); margin-bottom: 12px; letter-spacing: .01em; font-style: italic; }
+.bg-olive .sec-ctx { color: rgba(236,229,210,.65); }
 .sec-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(32px, 7vw, 46px); line-height: 1.06; color: var(--olive); letter-spacing: -.01em; margin-bottom: 10px; }
 .sec-title em { font-style: italic; }
 .bg-olive .sec-title { color: #fff; }
 .sec-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 20px; color: var(--text-light); margin-bottom: 16px; }
 .rule { width: 38px; height: 2px; background: var(--terracotta); margin-bottom: 30px; }
-.bg-olive .rule { background: #E8A580; }
+.bg-olive .rule { background: var(--terra-pale); }
 
 /* BODY TEXT */
 p.body { font-size: 17px; line-height: 1.8; color: var(--text-mid); margin-bottom: 18px; max-width: 66ch; }
@@ -77,8 +90,8 @@ p.body strong { font-weight: 600; color: var(--text); }
 .pq blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(20px, 5vw, 28px); line-height: 1.45; color: var(--terracotta); }
 
 /* VERSE */
-.verse { padding: 24px; margin-top: 28px; border-left: 3px solid var(--terracotta); background: rgba(0,0,0,.03); }
-.bg-sand .verse { background: rgba(255,255,255,.55); }
+.verse { padding: 28px 0; margin-top: 28px; border-top: 1px solid var(--sand); border-bottom: 1px solid var(--sand); }
+.bg-sand .verse { border-color: rgba(0,0,0,.12); }
 .verse blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--olive); line-height: 1.5; margin-bottom: 8px; }
 .verse cite { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-light); }
 
@@ -114,13 +127,13 @@ p.body strong { font-weight: 600; color: var(--text); }
 .motto { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--olive-mid); margin-top: 20px; }
 
 /* GOAL / DONATION */
-.goal { background: rgba(255,255,255,.07); border-left: 3px solid #E8A580; padding: 26px; margin-bottom: 28px; }
-.goal-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: #E8A580; margin-bottom: 10px; }
+.goal { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); padding: 26px; margin-bottom: 28px; border-radius: 2px; }
+.goal-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--terra-pale); margin-bottom: 10px; }
 .goal-h { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(19px, 4.5vw, 24px); line-height: 1.35; color: #fff; margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.14); }
 .helps-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; color: rgba(255,255,255,.65); margin-bottom: 10px; }
 .helps { list-style: none; margin-bottom: 0; }
 .helps li { font-size: 14px; line-height: 1.72; color: var(--on-olive); padding: 5px 0; display: flex; gap: 10px; }
-.helps li::before { content: "—"; color: #E8A580; flex-shrink: 0; }
+.helps li::before { content: "—"; color: var(--terra-pale); flex-shrink: 0; }
 
 .tiers-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.65); margin-bottom: 12px; text-align: center; }
 .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
@@ -137,7 +150,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 /* PIX */
 .pix { margin-top: 52px; padding: 28px 24px; border: 1px solid rgba(255,255,255,.16); border-radius: 2px; }
-.pix-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: #E8A580; margin-bottom: 14px; }
+.pix-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: var(--terra-pale); margin-bottom: 14px; }
 .pix-line { font-size: 15px; color: var(--on-olive); margin-bottom: 6px; }
 .pix-line strong { font-weight: 600; }
 .pix-note { font-size: 13px; color: rgba(255,255,255,.52); margin-top: 12px; line-height: 1.7; font-style: italic; }
@@ -160,7 +173,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 .closing { text-align: center; padding: 96px 0 80px; }
 .closing-h { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(30px, 6.5vw, 42px); line-height: 1.3; color: #fff; margin-bottom: 24px; }
 .closing-lines { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(17px, 4vw, 22px); color: rgba(236,229,210,.95); line-height: 1.8; margin-bottom: 36px; }
-.bg-olive .btn-primary { background: #E8A580; color: var(--olive); }
+.bg-olive .btn-primary { background: var(--terra-pale); color: var(--olive); }
 .bg-olive .btn-primary:hover { background: #F1B898; }
 .sig { font-size: 14px; color: rgba(236,229,210,.82); font-style: italic; line-height: 1.8; margin-top: 24px; }
 
@@ -252,7 +265,7 @@ p.body strong { font-weight: 600; color: var(--text); }
   </div>
   <div class="editorial-copy">
   <div class="wrap">
-    <p class="label">Onde estamos</p>
+    <p class="sec-ctx">Onde estamos</p>
     <h2 class="sec-title">Gurinhém,<br>interior da Paraíba</h2>
     <div class="rule"></div>
     <p class="body">Gurinhém fica a cerca de 80 km de João Pessoa. É uma cidade pequena, com recursos limitados e muitas famílias sem acesso fácil a boa educação, formação cristã profunda ou cuidado pastoral constante.</p>
@@ -266,7 +279,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 <section class="fade-in">
   <div class="wrap">
-    <p class="label">Uma missão, duas frentes</p>
+    <p class="sec-ctx">Uma missão, duas frentes</p>
     <h2 class="sec-title">Dois trabalhos,<br>um mesmo chamado</h2>
     <div class="rule"></div>
     <p class="body" style="font-style:italic;color:var(--text-light)">Nossa vida em Gurinhém se organiza em 2 frentes que caminham juntas.</p>
@@ -294,7 +307,7 @@ p.body strong { font-weight: 600; color: var(--text); }
   </div>
   <div class="editorial-copy">
   <div class="wrap">
-    <p class="label">A comunidade</p>
+    <p class="sec-ctx">A comunidade</p>
     <h2 class="sec-title"><em>Igreja Comum</em></h2>
     <p class="sec-sub">Uma comunidade em formação</p>
     <div class="rule"></div>
@@ -318,7 +331,7 @@ p.body strong { font-weight: 600; color: var(--text); }
   </div>
   <div class="editorial-copy">
   <div class="wrap">
-    <p class="label">A escola</p>
+    <p class="sec-ctx">A escola</p>
     <h2 class="sec-title">Instituto Lumine</h2>
     <p class="sec-sub">Luz pela educação</p>
     <div class="rule"></div>
@@ -341,7 +354,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 <section class="bg-sand fade-in">
   <div class="wrap">
-    <p class="label">Por que precisamos de parceiros</p>
+    <p class="sec-ctx">Por que precisamos de parceiros</p>
     <h2 class="sec-title">Para permanecer,<br>precisamos de estabilidade</h2>
     <div class="rule"></div>
     <p class="body">Cuidado pastoral, educação e hospitalidade acontecem no detalhe: aluguel pago, comida na mesa, gasolina, tempo disponível, livros, filhos cuidados, casa aberta.</p>
@@ -392,7 +405,7 @@ p.body strong { font-weight: 600; color: var(--text); }
 
 <section class="fade-in">
   <div class="wrap">
-    <p class="label">Parceria é relacionamento</p>
+    <p class="sec-ctx">Parceria é relacionamento</p>
     <h2 class="sec-title">Como você acompanha</h2>
     <div class="rule"></div>
     <p class="body">Quem caminha conosco recebe, 1 vez por mês, um informativo simples e honesto. Queremos que você saiba pelo que está orando, o que está ajudando a sustentar e como a missão está tomando forma.</p>

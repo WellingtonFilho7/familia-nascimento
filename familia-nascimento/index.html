@@ -138,13 +138,16 @@ p.body strong { font-weight: 600; color: var(--text); }
 .helps li { font-size: 14px; line-height: 1.72; color: var(--on-olive); padding: 5px 0; display: flex; gap: 10px; }
 .helps li::before { content: "—"; color: var(--terra-pale); flex-shrink: 0; }
 
-.tiers-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.65); margin-bottom: 12px; text-align: center; }
+.tiers-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.65); margin-bottom: 22px; text-align: center; }
 .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
 @media (min-width: 560px) { .tiers { grid-template-columns: repeat(4, 1fr); gap: 8px; } }
-.tier-btn { display: block; padding: 18px 6px; text-align: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); text-decoration: none; transition: background .2s, border-color .2s; border-radius: 2px; }
+.tier-btn { position: relative; display: block; padding: 18px 6px; text-align: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); text-decoration: none; transition: background .2s, border-color .2s; border-radius: 2px; }
 .tier-btn:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.4); }
-.tier-btn:first-child { border-color: rgba(255,255,255,.36); background: rgba(255,255,255,.11); }
+.tier-featured { border-color: var(--terra-pale); background: rgba(255,255,255,.13); }
+.tier-featured:hover { border-color: var(--terra-pale); background: rgba(255,255,255,.18); }
+.tier-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--terra-pale); color: var(--olive-deep); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
 .tier-btn:last-child { grid-column: 1 / -1; }
+.tiers-reassure { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.62); text-align: center; margin-bottom: 20px; }
 .tier-amt { font-family: 'Alegreya', serif; font-weight: 400; font-size: 34px; color: #fff; display: block; line-height: 1; }
 .tier-unit { font-size: 11px; color: rgba(255,255,255,.6); }
 .tier-livre .tier-amt { font-size: 22px; padding: 6px 0; }
@@ -418,11 +421,12 @@ p.body strong { font-weight: 600; color: var(--text); }
     <p class="tiers-lbl">Escolha um valor mensal</p>
     <div class="tiers">
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c1bc86871564e81b67c430d7e22c15a" target="_blank" rel="noopener"><span class="tier-amt">R$50</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn tier-featured" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-badge">Mais escolhido</span><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4a3c0c56e39a44338dbad6e5bd4d46f1" target="_blank" rel="noopener"><span class="tier-amt">R$250</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=bde959feefbf478b9df22a85b396c1a7" target="_blank" rel="noopener"><span class="tier-amt">R$500</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn tier-livre" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=27854a51c7cf489595d913b44d059b27" target="_blank" rel="noopener"><span class="tier-amt">Outro valor</span><span class="tier-unit">escolher</span></a>
     </div>
+    <p class="tiers-reassure">A parceria é mensal e recorrente. Você pode ajustar o valor ou encerrar quando precisar — sem constrangimento.</p>
     <p class="partner-note">Alguns podem contribuir com menos, outros com mais. O alvo é formar uma base de <strong>50 parceiros fiéis</strong>.<br>A soma dessas parcerias nos dá algo precioso: margem para permanecer.</p>
     <div class="pix">
       <p class="pix-lbl">Para ofertas pontuais via Pix</p>

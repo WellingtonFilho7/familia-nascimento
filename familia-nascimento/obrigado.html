@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrigado! — Família Nascimento</title>
   <meta name="description" content="Obrigado por se tornar parceiro da Família Nascimento em Gurinhém. Deixe seus dados para receber atualizações mensais.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1E2418">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E2418'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23A54822'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -12,7 +15,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 .skip-link { position: absolute; top: -100%; left: 16px; background: var(--olive); color: #fff; padding: 10px 18px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 3px; z-index: 200; transition: top .2s; }
 .skip-link:focus { top: 16px; }
-*:focus-visible { outline: 2px solid var(--terra-pale); outline-offset: 3px; }
+*:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.top *:focus-visible { outline-color: var(--terra-pale); }
 :root {
   --cream: #F2EDE3; --sand: #D4C9AF; --sand-lt: #E8E0D0;
   --olive: #2D3424; --olive-deep: #1E2418;
@@ -22,6 +26,7 @@
   --terra-pale: #E8A580;
 }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { background: var(--cream); font-family: 'Alegreya Sans', sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
 
 /* HEADER */
@@ -44,10 +49,12 @@ body { background: var(--cream); font-family: 'Alegreya Sans', sans-serif; color
 .tf-wrap {
   border: 1px solid var(--sand);
   background: #fff;
-  min-height: 480px;
+  min-height: 560px;
   overflow: hidden;
   border-radius: 2px;
 }
+.tf-fallback { font-size: 14px; line-height: 1.7; color: var(--text-light); text-align: center; margin-top: 16px; }
+.tf-fallback a { color: var(--terracotta); font-weight: 600; }
 
 /* CONTACT STRIP */
 .contact-strip { background: var(--sand-lt); padding: clamp(44px, 7vw, 72px) 28px; text-align: center; }
@@ -74,14 +81,14 @@ footer em { font-style: italic; }
 <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
 <!-- HEADER -->
-<div class="top">
+<header class="top">
   <div class="top-inner">
     <p class="top-label">Bem-vindo à parceria</p>
     <h1 class="top-h">Você agora<br>caminha conosco.</h1>
     <div class="top-rule"></div>
     <p class="top-body">Obrigado por dar esse passo. Sua parceria mensal nos ajuda a permanecer em Gurinhém com estabilidade e a servir de perto. Isso é muito concreto para nós.</p>
   </div>
-</div>
+</header>
 
 <main id="conteudo">
 
@@ -93,8 +100,12 @@ footer em { font-style: italic; }
     <div class="rule"></div>
     <p class="form-intro">Uma vez por mês enviamos um informativo simples e honesto com notícias de Gurinhém, da Igreja Comum, do Instituto Lumine e da nossa vida em família.</p>
     <div class="tf-wrap">
-      <div data-tf-live="wn3vzrEw" style="width:100%;height:480px;"></div>
+      <div data-tf-live="wn3vzrEw" style="width:100%;height:560px;"></div>
     </div>
+    <noscript>
+      <p class="tf-fallback">Ative o JavaScript para preencher o formulário aqui, ou <a href="https://form.typeform.com/to/wn3vzrEw" target="_blank" rel="noopener">abra o formulário em uma nova aba</a>.</p>
+    </noscript>
+    <p class="tf-fallback">Não está vendo o formulário acima? <a href="https://form.typeform.com/to/wn3vzrEw" target="_blank" rel="noopener">Abra em uma nova aba</a>.</p>
   </div>
 </section>
 

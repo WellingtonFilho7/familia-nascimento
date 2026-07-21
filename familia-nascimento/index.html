@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Família Nascimento — Missão em Gurinhém</title>
   <meta name="description" content="Uma família cristã enraizada em Gurinhém, Paraíba. Cuidado pastoral, vida comunitária e educação cristã. Torne-se um parceiro mensal.">
+  <meta name="theme-color" content="#1E2418">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E2418'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23A54822'/%3E%3C/svg%3E">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Família Nascimento — Missão em Gurinhém">
   <meta property="og:description" content="Wellington e Dyanna Nascimento deixaram a cidade para servir de perto no interior da Paraíba. Cuidado pastoral, Igreja Comum e Instituto Lumine. Torne-se um parceiro mensal.">
@@ -23,7 +25,8 @@
 html { scroll-behavior: smooth; }
 .skip-link { position: absolute; top: -100%; left: 16px; background: var(--olive); color: #fff; padding: 10px 18px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 3px; z-index: 200; transition: top .2s; }
 .skip-link:focus { top: 16px; }
-*:focus-visible { outline: 2px solid var(--terra-pale); outline-offset: 3px; }
+*:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.hero *:focus-visible, .bg-olive *:focus-visible { outline-color: var(--terra-pale); }
 :root {
   --cream: #F2EDE3; --sand: #D4C9AF; --sand-lt: #E8E0D0;
   --olive: #2D3424; --olive-mid: #4D5840; --olive-deep: #1E2418;
@@ -135,13 +138,16 @@ p.body strong { font-weight: 600; color: var(--text); }
 .helps li { font-size: 14px; line-height: 1.72; color: var(--on-olive); padding: 5px 0; display: flex; gap: 10px; }
 .helps li::before { content: "—"; color: var(--terra-pale); flex-shrink: 0; }
 
-.tiers-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.65); margin-bottom: 12px; text-align: center; }
+.tiers-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.65); margin-bottom: 22px; text-align: center; }
 .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
 @media (min-width: 560px) { .tiers { grid-template-columns: repeat(4, 1fr); gap: 8px; } }
-.tier-btn { display: block; padding: 18px 6px; text-align: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); text-decoration: none; transition: background .2s, border-color .2s; border-radius: 2px; }
+.tier-btn { position: relative; display: block; padding: 18px 6px; text-align: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); text-decoration: none; transition: background .2s, border-color .2s; border-radius: 2px; }
 .tier-btn:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.4); }
-.tier-btn:first-child { border-color: rgba(255,255,255,.36); background: rgba(255,255,255,.11); }
+.tier-featured { border-color: var(--terra-pale); background: rgba(255,255,255,.13); }
+.tier-featured:hover { border-color: var(--terra-pale); background: rgba(255,255,255,.18); }
+.tier-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--terra-pale); color: var(--olive-deep); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
 .tier-btn:last-child { grid-column: 1 / -1; }
+.tiers-reassure { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.62); text-align: center; margin-bottom: 20px; }
 .tier-amt { font-family: 'Alegreya', serif; font-weight: 400; font-size: 34px; color: #fff; display: block; line-height: 1; }
 .tier-unit { font-size: 11px; color: rgba(255,255,255,.6); }
 .tier-livre .tier-amt { font-size: 22px; padding: 6px 0; }
@@ -154,6 +160,10 @@ p.body strong { font-weight: 600; color: var(--text); }
 .pix-line { font-size: 15px; color: var(--on-olive); margin-bottom: 6px; }
 .pix-line strong { font-weight: 600; }
 .pix-note { font-size: 13px; color: rgba(255,255,255,.52); margin-top: 12px; line-height: 1.7; font-style: italic; }
+.pix-key-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+.pix-copy { background: transparent; border: 1px solid rgba(255,255,255,.28); color: var(--terra-pale); font-family: inherit; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 3px; cursor: pointer; letter-spacing: .02em; transition: background .2s, border-color .2s, color .2s; }
+.pix-copy:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.5); }
+.pix-copy.copied { color: #fff; border-color: var(--terra-pale); }
 
 /* LISTS */
 .body-list { list-style: none; margin: 4px 0 0; }
@@ -181,15 +191,15 @@ p.body strong { font-weight: 600; color: var(--text); }
 .ac-quote { font-size: 16px; line-height: 1.85; color: var(--text-light); text-align: center; max-width: 520px; margin: 0 auto; padding: 0 28px; font-style: italic; }
 
 /* FLOAT */
-.float-cta { position: fixed; bottom: max(20px, env(safe-area-inset-bottom)); right: max(20px, env(safe-area-inset-right)); z-index: 100; background: var(--terracotta); color: #fff; font-size: 14px; font-weight: 600; padding: 15px 24px; text-decoration: none; border-radius: 999px; box-shadow: 0 6px 24px rgba(0,0,0,.25); opacity: 0; pointer-events: none; transform: translateY(16px); transition: opacity .35s, transform .35s; }
-.float-cta.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.float-cta.hide { opacity: 0; pointer-events: none; }
+.float-cta { position: fixed; bottom: max(20px, env(safe-area-inset-bottom)); right: max(20px, env(safe-area-inset-right)); z-index: 100; background: var(--terracotta); color: #fff; font-size: 14px; font-weight: 600; padding: 15px 24px; text-decoration: none; border-radius: 999px; box-shadow: 0 6px 24px rgba(0,0,0,.25); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(16px); transition: opacity .35s, transform .35s, visibility .35s; }
+.float-cta.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+.float-cta.hide { opacity: 0; visibility: hidden; pointer-events: none; }
 
 /* ANIM */
 .fade-in { transition: opacity .9s ease, transform .9s ease; }
 .fade-in.will-animate { opacity: 0; transform: translateY(28px); }
 .fade-in.will-animate.visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .fade-in { transition: none; } .float-cta { transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .fade-in { transition: none; } .float-cta { transition: none; } }
 
 
 @media (min-width: 1024px) {
@@ -212,6 +222,10 @@ p.body strong { font-weight: 600; color: var(--text); }
   .fronts .front { padding-bottom: 8px; }
 }
 @media (max-width: 480px) { section { padding: 64px 0; } .wrap { width: min(100% - 44px, var(--content-max)); } .hero-body { width: min(100% - 44px, var(--layout-max)); padding: 54px 0 52px; } .hero-h1 { font-size: clamp(34px, 12vw, 42px); line-height: 1.08; margin-bottom: 16px; max-width: 10.5ch; } .hero-body-text { font-size: 15px; line-height: 1.72; max-width: 34ch; } .hero-tag { margin: 20px 0 28px; line-height: 1.5; } .hero-ctas { gap: 10px; } .btn-primary, .btn-ghost { padding: 14px 18px; font-size: 14px; } .hero-foot { width: min(100% - 44px, var(--layout-max)); padding: 20px 0; } .port-wrap, .img-break { width: min(100% - 44px, var(--layout-max)); } .editorial-block { width: min(100% - 44px, var(--layout-max)); } .editorial-block .img-break, .editorial-block .port-wrap { width: 100%; } .editorial-copy { padding-top: 36px; } }
+@media (max-width: 480px) {
+  .contact-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .contact-list a { text-align: left; word-break: break-word; }
+}
 </style>
 </head>
 <body>
@@ -252,7 +266,8 @@ p.body strong { font-weight: 600; color: var(--text); }
     <h2 class="sec-title">Wellington &amp; Dyanna</h2>
     <div class="rule"></div>
     <p class="body">Somos Wellington e Dyanna Nascimento, pais de Giovanni, Benjamin, José e Judah, com Isaac a caminho.</p>
-    <p class="body">Há 15 anos nossa vida tem sido moldada pelo ministério. Pregamos, ensinamos, traduzimos, servimos em viagens missionárias e caminhamos com pessoas em restauração, no Brasil e em outros países. Já servimos em contextos muito diferentes: igrejas locais, conferências, escolas ministeriais, viagens internacionais, encontros de oração, tradução e cuidado pastoral direto.</p>
+    <p class="body">Há 15 anos nossa vida tem sido moldada pelo ministério. Pregamos, ensinamos, traduzimos, servimos em viagens missionárias e caminhamos com pessoas em restauração, no Brasil e em outros países.</p>
+    <p class="body">Já servimos em contextos muito diferentes: igrejas locais, conferências, escolas ministeriais, viagens internacionais, encontros de oração, tradução e cuidado pastoral direto.</p>
     <p class="body">Durante 8 desses anos, atuamos juntos no cuidado de mulheres saindo de contextos de exploração e vulnerabilidade. Essa parte da nossa história nos ensinou algo que hoje carregamos para Gurinhém: gente ferida precisa de presença, tempo, verdade e mesa.</p>
     <p class="body">Também caminhamos há mais de 15 anos com o <em>Brasil de Joelhos</em>, ministério de oração e intercessão liderado pelo nosso pastor. Nossa ida para Gurinhém não nasceu de impulso. Ela tem oração, vínculo, prestação de contas e uma história longa de serviço.</p>
   </div>
@@ -406,17 +421,21 @@ p.body strong { font-weight: 600; color: var(--text); }
     <p class="tiers-lbl">Escolha um valor mensal</p>
     <div class="tiers">
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c1bc86871564e81b67c430d7e22c15a" target="_blank" rel="noopener"><span class="tier-amt">R$50</span><span class="tier-unit">/mês</span></a>
-      <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
+      <a class="tier-btn tier-featured" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=821a91360e1e43e6b5ac0dd8178553fa" target="_blank" rel="noopener"><span class="tier-badge">Mais escolhido</span><span class="tier-amt">R$100</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4a3c0c56e39a44338dbad6e5bd4d46f1" target="_blank" rel="noopener"><span class="tier-amt">R$250</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=bde959feefbf478b9df22a85b396c1a7" target="_blank" rel="noopener"><span class="tier-amt">R$500</span><span class="tier-unit">/mês</span></a>
       <a class="tier-btn tier-livre" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=27854a51c7cf489595d913b44d059b27" target="_blank" rel="noopener"><span class="tier-amt">Outro valor</span><span class="tier-unit">escolher</span></a>
     </div>
+    <p class="tiers-reassure">A parceria é mensal e recorrente. Você pode ajustar o valor ou encerrar quando precisar — sem constrangimento.</p>
     <p class="partner-note">Alguns podem contribuir com menos, outros com mais. O alvo é formar uma base de <strong>50 parceiros fiéis</strong>.<br>A soma dessas parcerias nos dá algo precioso: margem para permanecer.</p>
     <div class="pix">
       <p class="pix-lbl">Para ofertas pontuais via Pix</p>
-      <p class="pix-line">Chave: <strong>056.758.164-02</strong></p>
+      <div class="pix-key-row">
+        <span class="pix-line">Chave: <strong id="pixKey">056.758.164-02</strong></span>
+        <button type="button" class="pix-copy" id="pixCopy" aria-label="Copiar chave Pix">Copiar</button>
+      </div>
       <p class="pix-line">Nome: <strong>José Wellington do Nascimento Filho</strong></p>
-      <p class="pix-note">Para parceria mensal, prefira os botões acima. Para ofertas pontuais via Pix, envie seu contato pelo WhatsApp para receber nossos informativos mensais. Toda oferta é recebida com gratidão. Mas, neste momento, as parcerias mensais são o que mais nos ajudam a planejar e servir com constância.</p>
+      <p class="pix-note">Toda oferta é recebida com gratidão. Para parceria mensal, prefira os botões acima — é o que mais nos ajuda a planejar o mês seguinte. Ofertou por Pix? Envie seu contato pelo WhatsApp para receber nossos informativos.</p>
     </div>
   </div>
 </section>
@@ -478,6 +497,25 @@ p.body strong { font-weight: 600; color: var(--text); }
   window.addEventListener('scroll', tick, {passive: true});
   window.addEventListener('resize', tick);
   tick();
+
+  const pixCopy = document.getElementById('pixCopy');
+  if (pixCopy) {
+    pixCopy.addEventListener('click', async () => {
+      const key = document.getElementById('pixKey').textContent.trim();
+      try {
+        await navigator.clipboard.writeText(key);
+      } catch (e) {
+        const t = document.createElement('textarea');
+        t.value = key; t.setAttribute('readonly', ''); t.style.position = 'absolute'; t.style.left = '-9999px';
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        document.body.removeChild(t);
+      }
+      pixCopy.textContent = 'Copiado ✓';
+      pixCopy.classList.add('copied');
+      setTimeout(() => { pixCopy.textContent = 'Copiar'; pixCopy.classList.remove('copied'); }, 2000);
+    });
+  }
 </script>
 </body>
 </html>
